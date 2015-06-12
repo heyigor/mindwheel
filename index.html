@@ -3,18 +3,28 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>mindwheel</title>
+    <title>Mindwheel</title>
     <style>
       body {
         font-family: arial;
         margin: 0;
         padding: none;
-	    background:
-	      url("mindwheel.jpg") top center no-repeat;
+	    background-image: url('mindwheel.jpg');
+	    background-repeat: no-repeat;
+	    background-attachment: fixed;
+	    background-position: 50% 80px; 
 	    background-color: black;
       }
+	  p {
+	      font-family: "Times New Roman", Georgia, Serif;
+	      color: white;
+		  text-align: left;
+	      font-size: 100%;
+          width: 300px;
+          margin-left: 20px;
+	  }
 
-      .emscripten { padding-right: 0; margin-left: auto; margin-right: auto; display: block; }
+      .emscripten { margin-top: 60px; padding-left: 0; padding-right: 0; margin-left: auto; margin-right: auto; display: block; }
       div.emscripten { text-align: center; }      
       div.emscripten_border { border: 1px solid black; }
       /* the canvas *must not* have any border or padding, or mouse coords will be wrong */
@@ -100,8 +110,7 @@
       }
     </style>
   </head>
-  <body>
- 
+  <body> 
     <div class="spinner" id='spinner'></div>
     <div class="emscripten" id="status">Downloading...</div>
 
@@ -111,7 +120,6 @@
     <div class="emscripten">
       <progress value="0" max="100" id="progress" hidden=1></progress>
     </div>
-
     
     <div class="emscripten_border">
       <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()"></canvas>
