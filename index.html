@@ -413,6 +413,9 @@ function assert(check, msg) {
 })();
 
 Module['arguments'] = [ './Go.exe' ];
+if (typeof Module['setWindowTitle'] === 'undefined') {
+  Module['setWindowTitle'] = function(title) {};
+}
 </script>
     <script async type="text/javascript" src="dosbox.js"></script>
   </body>
